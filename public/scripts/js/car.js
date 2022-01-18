@@ -24,6 +24,8 @@ $(document).ready(function() {
             seat: $("#seat").val(),
             brand: $("#brand").val(),
             color: $("#color").val(),
+            info: $("#info").val(),
+            type: $("#type").val(),
 
 
         };
@@ -37,6 +39,8 @@ $(document).ready(function() {
                 seat: $("#seat").val(),
                 brand: $("#brand").val(),
                 color: $("#color").val(),
+                info: $("#info").val(),
+                type: $("#type").val(),
                 car_id: car_id
             };
             method = "PUT";
@@ -71,6 +75,8 @@ $(document).ready(function() {
         $("#seat").val('');
         $("#brand").val('');
         $("#color").val('');
+        $("#info").val('');
+        $("#type").val('');
         // show modal
         $("#exampleModal").modal("toggle");
 
@@ -91,6 +97,8 @@ $(document).ready(function() {
         $("#seat").val(postData.seat);
         $("#brand").val(postData.brand);
         $("#color").val(postData.color);
+        $("#info").val(postData.info);
+        $("#type").val(postData.type);
 
         car_id = postData.car_id;
 

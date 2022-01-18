@@ -5,7 +5,7 @@ const con = mysql.createConnection(config);
 const checkUser = require('./middleware');
 
 router.get("/newcarmatch", checkUser, (req, res) => {
-    const sql = "SELECT * FROM car_match,driver,car WHERE MONTH(date)=MONTH(CURRENT_TIMESTAMP) AND car_match.driver_id =driver.driver_id AND car_match.car_id = car.car_id ORDER BY date DESC";
+    const sql = "SELECT * FROM car_match,driver,car WHERE DATE(date)=DATE(CURRENT_TIMESTAMP) AND car_match.driver_id =driver.driver_id AND car_match.car_id = car.car_id ORDER BY date DESC";
     con.query(sql, function(err, result, fields) {
         if (err) {
             console.error(err.message);
@@ -89,7 +89,7 @@ router.get("/graph_carmatch_week", (req, res) => {
 
 router.get("/namelastname", checkUser, (req, res) => {
     const sql = "SELECT name,lastname FROM driver  WHERE role =2";
-    con.query(sql, function (err, result4, fields) {
+    con.query(sql, function(err, result4, fields) {
         if (err) {
             console.error(err.message);
             res.status(503).send("Database error");
@@ -100,9 +100,9 @@ router.get("/namelastname", checkUser, (req, res) => {
     });
 })
 
-router.get("/license_plate",  (req, res) => {
+router.get("/license_plate", (req, res) => {
     const sql = "SELECT `License_plate` FROM `car` ";
-    con.query(sql, function (err, result4, fields) {
+    con.query(sql, function(err, result4, fields) {
         if (err) {
             console.error(err.message);
             res.status(503).send("Database error");

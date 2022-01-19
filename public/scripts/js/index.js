@@ -6,7 +6,7 @@ var _lat
 var _lng
     // var _state
 var beachMarker = []
-var connection = new WebSocket('ws://localhost:34000')
+var connection = new WebSocket('ws://103.76.182.124:34000')
     // var connection = new WebSocket('wss://pytransit.szo.me')
 var array = []
 var current_lat
@@ -48,7 +48,7 @@ function geocoderAddress(geocoder, resultsMap) {
 }
 
 function getLocation() {
-    console.log('hi')
+    //console.log('hi')
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition)
     } else {
@@ -429,7 +429,7 @@ function initMap() {
 
     connection.onmessage = function(e) {
         var obj = JSON.parse(e.data)
-        console.log(obj.topic)
+            //console.log(obj.topic)
             //ty(map, array)
         var index = dataCar.findIndex(
                 (std) => JSON.stringify(std.driver_id) === obj.topic,

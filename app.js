@@ -205,7 +205,7 @@ app.put('/res_date', (req, res) => {
 
 app.post('/addlocation', (req, res) => {
     const { carmatch, lat, lng } = req.body
-    console.log(req.body)
+        //console.log(req.body)
     const sql = 'INSERT INTO location(carmatch, lat, lng) VALUES (?,?,?)'
     con.query(sql, [carmatch, lat, lng], (err, result) => {
         if (err) {

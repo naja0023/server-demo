@@ -12,9 +12,7 @@
         <!-- GOOGLE FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <!-- BOXICONS -->
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <!-- APP CSS -->
@@ -211,61 +209,9 @@
                                                 <!-- <button type="button" class="btn btn-danger btnDelete"
                                                 blogID="<%= resule[index].driver_id %>">Delete</button> -->
                                                 <!-- <i class="fas fa-edit"></i> -->
-                                                <i class="fas fa-edit editbut ml-3"
-                                                    style="font-size:27px; cursor: pointer; align-items: center; color: #1976d2;"
-                                                    blogData="<%= JSON.stringify(resule[index]) %>"></i>
+                                                <i class="fas fa-edit editbut ml-3" style="font-size:27px; cursor: pointer; align-items: center; color: #1976d2;" blogData="<%= JSON.stringify(resule[index]) %>"></i>
 
                                             </td>
-                                        </tr>
-                                        <% } %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="box">
-
-                        <div class="box-body overflow-scroll">
-                            <div>
-                                <h3>ประวัติการรีวิว(เดือนนี้)</h3>
-                            </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>ผู้โดยสาร</th>
-                                        <th></th>
-                                        <th>คนขับรถ</th>
-                                        <th>คะแนน</th>
-                                        <th>ข้อเสนอแนะ</th>
-                                        <th>วันที่</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% for( let index=0; index < count2.length; index++ ) { %>
-                                        <tr>
-                                            <td>
-                                                <%= count2[index].user_name %>
-                                            </td>
-                                            <td>
-                                                รีวิวให้
-                                                <i class='bx bx-arrow-back bx-rotate-180' style='color:#0aafa8'></i>
-                                            </td>
-                                            <td>
-                                                <%= count2[index].name %>
-                                                    <%= count2[index].lastname %>
-                                            </td>
-                                            <td>
-                                                <%= count2[index].point %>
-                                                    <i class='bx bxs-star' style='color:#ecd713'></i>
-                                            </td>
-                                            <td>
-                                                <%= count2[index].report %>
-                                            </td>
-                                            <td>
-                                                <%= count2[index].rd_date %>
-                                            </td>
-
                                         </tr>
                                         <% } %>
                                 </tbody>
@@ -274,8 +220,7 @@
                     </div>
                 </div>
                 <!-- Modal Add Edit User -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -306,13 +251,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">อีเมลล์:</label>
-                                        <input class="form-control" type="email" placeholder="example@mail.com"
-                                            id="email"></input>
+                                        <input class="form-control" type="email" placeholder="example@mail.com" id="email"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">เบอร์โทร:</label>
-                                        <input class="form-control" type="tel" placeholder="08xxxxxxxx" id="tel"
-                                            maxlength="10"></input>
+                                        <input class="form-control" type="tel" placeholder="08xxxxxxxx" id="tel" maxlength="10"></input>
                                         <p id="statusPhone" style="color: red;"></p>
                                     </div>
                                     <div class="form-group">
@@ -322,8 +265,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">ที่อยู่:</label>
-                                        <input class="form-control" placeholder="ตัวอย่าง : 99 ม.9 เพิ่มพูน ซอย9"
-                                            id="address"></input>
+                                        <input class="form-control" placeholder="ตัวอย่าง : 99 ม.9 เพิ่มพูน ซอย9" id="address"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">จังหวัด:</label>

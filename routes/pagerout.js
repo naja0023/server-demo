@@ -9,7 +9,7 @@ var client = mqtt.connect('mqtt://broker.emqx.io')
 router.get('/login', (req, res) => {
     const token = req.signedCookies['mytoken']
     if (token) {
-        res.redirect("/newadmianse")
+        res.redirect("/newadminse")
     } else {
         res.render('login')
     }
